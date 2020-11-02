@@ -80,14 +80,16 @@ function draw() {
     text("OVER", 250, 200);
     textSize(30);
     text("Final score : " + score, 200, 250);
+    monkey.velocityY = 0;
 
     text("Press 'r' key to restart", 200, 300);
 
     if (keyDown("r")) {
       gameState = "play";
-      monkey.velocityY = 0;
       lives = 3;
       score = 0;
+      monkey.y = 350;
+      monkey.collide(invisibleGround);
     }
 
   }
