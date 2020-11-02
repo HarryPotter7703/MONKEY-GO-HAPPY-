@@ -44,7 +44,7 @@ function draw() {
     if (keyDown("space") && monkey.y > 300) {
       monkey.velocityY = -20;
     }
-    monkey.velocityY += 0.8;
+    monkey.velocityY += 0.6;
     monkey.collide(invisibleGround);
     invisibleGround.visible = false;
     spawnObstacles();
@@ -88,7 +88,7 @@ function draw() {
       gameState = "play";
       lives = 3;
       score = 0;
-      monkey.y = 350;
+      monkey.y = 300;
       monkey.collide(invisibleGround);
     }
 
